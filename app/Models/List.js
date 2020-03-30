@@ -22,8 +22,7 @@ export default class List {
     });
 
     return `
-    <div style="background-color: ${this.color};" class="col-12 col-md-3 my-2">
-    <div class="card" style="width: 15rem;">
+    <div class="card" style="width: 15rem; background-color: ${this.color};">
       <div class="card-body">
       <form action="" id="add-item" onsubmit="app.listController.addListItem(event, '${this.id}')">
       <i class="fa fa-times removeIcon" onclick="app.listController.removeList('${this.id}')"></i>
