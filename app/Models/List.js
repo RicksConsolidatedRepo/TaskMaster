@@ -22,14 +22,16 @@ export default class List {
     });
 
     return `
-    <div class="card" style="width: 15rem; background-color: ${this.color};">
+    <div class="card" style="width: 15rem;">
       <div class="card-body">
+      <header style="background-color: ${this.color};">
       <form action="" id="add-item" onsubmit="app.listController.addListItem(event, '${this.id}')">
       <i class="fa fa-times removeIcon" onclick="app.listController.removeList('${this.id}')"></i>
       <div class="listBtns m-1">
       <h5 class="card-title">${this.name}</h5>
       <button class="btn btn-light" type="submit" title="Add a task"><i class="fas fa-plus add-item-btn"></i></button></div>
         <div class="form-group">
+        </header>
           <input type="text" class="form-control" id="listItemName" name="listItemName"
             placeholder="Add Task..." required="true">
         </div>
